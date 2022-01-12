@@ -13,7 +13,7 @@ Please put plots and written answers in the Jupyter notebook [`answers.ipynb`](a
 ## Important Information
 
 ### Due Date
-This assignment is due Friday, October 15 at 12pm (noon) Chicago time.
+This assignment is due Wednesday, January 26 at 1:29pm Chicago time.
 
 You should make sure you have pushed your completed work to GitHub by this time.
 
@@ -39,7 +39,7 @@ The following rubric will be used for grading.
 | Part B    | /2 |  /2   | /1  |  /5 |
 | Part C    | /6 |  /7   | /2  |  /15 |
 | Part D    | /5 |  /7   | /3  |  /15 |
-| Part E    | /2 |  /2   | /1  |  /10 |
+| Part E    | /2 |  /6   | /2  |  /10 |
 | Part F    |    |  /5   |     |  /5 |
 | Problem 1 |   |   |   | /25 |
 | Part A    | /3 |  /8   | /4  |  /15 |
@@ -68,18 +68,6 @@ You need to pass all tests to receive full points.
 
 Keep in mind that the autograder is just doing some basic sanity checks, which is why there are also separate points for "correctness".  However, if you are passing the autograder checks, chances are you're on your way to success.
 
-### Some git/GitHub Tips
-
-On Homework 0, GitHub classroom sometimes didn't configure things correctly.  This is apparently a bug, and I have filed an issue with GitHub.
-
-To make things work as smooth as possible, please check:
-1. GitHub actions is enabled for your repository - you can check this in the actions tab.  This just requires clicking a button if it isn't enabled.  See [the template repository](https://github.com/caam37830/homework-1-template/actions) for example.  There is an action configured that checks for problems in the code and runs the autograder whenever you push code, which can give you quick feedback on if things aren't working properly.  You can always run the autograder tests by yourself without GitHub actions.
-2. Check that there is a feedback pull request created for your repository - if this hasn't happened contact the course staff, so we can do it manually.
-
-Also, make sure you don't delete the `.gitignore` file, `.github` folder, or `.git` folder.  These are "hidden" files that don't always show in file managers - you can view them in terminal using `ls -a`.  `.gitignore` keeps temporary files out of version control (like `__pycache__`, or `.ipynb_checkpoints`), and the `.github` folder contains information to run the GitHub actions for the repository discussed above.  The `.git` folder contains all the version control information for your repository.
-
-
-
 ## Problem 0
 
 In this problem, you will implement a library of function classes related by class inheritance.
@@ -90,12 +78,12 @@ Put all your class and function definitions in [`functions.py`](functions.py), a
 
 ### Part A: Finish the parent class (5 points)
 
-The parent class for this library is `AbstractFunction`.  Implement
+The parent class for this library is `AbstractFunction`.
 Complete the `plot` method in this class.  You should return the output of the `plot` function in PyPlot.
 
 Use the `evaluate` method on the keyword argument `vals` to make a plot of the function (evaluate will be implemented in child classes).  Pass any additional keyword arguments to the `plot` function in PyPlot.
 
-Note that we will need to implement child classes:
+In parts B-D, we will need to implement child classes:
 * `Compose` (composition of functions)
 * `Sum` (sum of functions)
 * `Product` (product of functions)
